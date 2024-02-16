@@ -7,8 +7,9 @@
 }
 
 nav {
-    background-color: black;
+    background-color: rgb(121, 56, 185);
     color: white;
+    height: 75px;
 }
 
 nav ul {
