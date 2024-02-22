@@ -1,0 +1,148 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #chat-container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        #chat-messages {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .message {
+            background-color: #f9f9f9;
+            padding: 8px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .message.me {
+            background-color: #e2f7cb;
+            float: right;
+        }
+        
+        .message.friend {
+            background-color: #cfe2f7;
+            float: left;
+        }
+        
+        #input-container {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            display: flex;
+        }
+        
+        #message-input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        
+        #send-button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #send-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Type your message">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for real-time chat application
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatMessages = document.getElementById('chat-messages');
+            const messageInput = document.getElementById('message-input');
+            const sendButton = document.getElementById('send-button');
+
+            // Function to add a new message to the chat interface
+            function addMessage(message, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.textContent = message;
+                messageElement.classList.add('message', sender);
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+            }
+
+            // Function to send a message
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (message !== '') {
+                    addMessage(message, 'me');
+                    // Simulate sending message to server (not implemented in this example)
+                    messageInput.value = '';
+                }
+            }
+
+            // Event listener for send button click
+            sendButton.addEventListener('click', function() {
+                sendMessage();
+            });
+
+            // Event listener for pressing Enter key in message input field
+            messageInput.addEventListener('keydown', function(event) {
+                if (event.keyCode === 13) { // Enter key
+                    sendMessage();
+                }
+            });
+
+            // Simulated incoming messages (for demonstration purposes)
+            setTimeout(function() {
+                addMessage('Hi there!', 'friend');
+            }, 1000);
+
+            setTimeout(function() {
+                addMessage('How are you?', 'friend');
+            }, 2000);
+
+
+            setTimeout(function() {
+                addMessage('I am great', 'friend');
+            }, 10000);
+
+            setTimeout(function() {
+                addMessage('So what is actually going on', 'friend');
+            }, 11000);
+        });
+    </script>
+</body>
+
+</html> -->

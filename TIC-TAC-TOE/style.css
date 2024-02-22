@@ -9,9 +9,19 @@
 nav {
     background-color: rgb(121, 56, 185);
     color: white;
-    height: 75px;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
 }
 
 nav ul {
     list-style: none;
 }
+
+.gameContainer {
+    background-color: yellow;
+}
+
+.container {}
