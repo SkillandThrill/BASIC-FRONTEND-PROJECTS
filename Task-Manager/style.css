@@ -35,7 +35,7 @@ h1 {
 
 .task-actions {
     display: inline-block;
-    float: right;
+    float: none;
 }
 
 .task-actions button {
